@@ -1,0 +1,19 @@
+绵阳市房屋风险分析时序数据部署说明
+
+1. 将以下文件放在同一个文件夹或 GitHub Pages 的同一路径：
+   - 绵阳市房屋安全卫星监测平台-三十一次优化版-风险时序回溯与界面可读性.html
+   - risk_analysis_timeline.json
+   - risk_analysis_result.json（当前期）
+   - risk_analysis_result_2026-01.json、risk_analysis_result_2026-02.json……（历史期）
+
+2. 每一个期间成果 JSON 均沿用 risk_analysis_result.json 的结构，无须改变 profiles、fields、items 的数据组织方式。
+
+3. risk_analysis_timeline.json 负责配置时间节点、日期和对应文件名。新增期间时，只需：
+   - 新增一个期间成果 JSON；
+   - 在 periods 数组中增加一条配置。
+
+4. HTML 的处理逻辑：
+   - GitHub/HTTP 环境下自动读取 risk_analysis_timeline.json 和各期间成果文件；
+   - 某一期间文件缺失时，该节点仍可操作，但会明确标注“推演数据”；
+   - 当前期默认可读取 risk_analysis_result.json；
+   - 浏览器直接双击以 file:// 打开时，受浏览器跨域限制，外部 JSON 可能无法自动读取，建议通过 GitHub Pages 或本地 Web 服务访问。

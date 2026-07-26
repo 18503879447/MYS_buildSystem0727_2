@@ -1,0 +1,16 @@
+{
+  "schema": "mianyang-risk-analysis-timeline",
+  "version": 1,
+  "title": "绵阳市房屋风险分析时序成果",
+  "defaultPeriod": "2026-07",
+  "description": "每个期次引用一个与 risk_analysis_result.json 相同结构的风险分析成果文件。HTML 会优先读取真实期间文件，缺失期次自动采用交互推演数据占位。",
+  "periods": [
+    {"id": "2026-01", "label": "2026年1月", "date": "2026-01-25", "file": "risk_analysis_result_2026-01.json"},
+    {"id": "2026-02", "label": "2026年2月", "date": "2026-02-25", "file": "risk_analysis_result_2026-02.json"},
+    {"id": "2026-03", "label": "2026年3月", "date": "2026-03-25", "file": "risk_analysis_result_2026-03.json"},
+    {"id": "2026-04", "label": "2026年4月", "date": "2026-04-25", "file": "risk_analysis_result_2026-04.json"},
+    {"id": "2026-05", "label": "2026年5月", "date": "2026-05-25", "file": "risk_analysis_result_2026-05.json"},
+    {"id": "2026-06", "label": "2026年6月", "date": "2026-06-25", "file": "risk_analysis_result_2026-06.json"},
+    {"id": "2026-07", "label": "2026年7月", "date": "2026-07-25", "file": "risk_analysis_result.json"}
+  ]
+}
